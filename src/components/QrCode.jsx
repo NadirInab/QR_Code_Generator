@@ -11,13 +11,12 @@ function QrCode() {
             width:280, 
             margin:2 , 
             color : {
-                dark:'#000080',
+                dark:'#000000',
                 light: '#F5F5F5'
             }
         }, (err, url) => {
-           
-            if (err) return console.log(err);
-            console.log(url);
+            // if (err) return console.log(err);
+            // console.log(url);
             setQrCode(url)
         })
     }
@@ -44,15 +43,15 @@ function QrCode() {
                     <div className="form-outline">
                         <input placeholder='eg : google.com' type="text" id="form1" className="form-control p-2" value={url} onChange={e => setUrl(e.target.value)} />
                     </div>
-                    <button id='generateBtn' onClick={generateQrCode} type="button" className="btn btn-muted fw-bold mx-2">
+                    <button id='generateBtn' onClick={generateQrCode}  className="">
                         Generate
                     </button>
                 </div>
                 {
                     qrCode &&
                     <div className='w-100 h-100 mr-3 text-center'>
-                        <img className='d-block mx-auto border-rounded' src={qrCode} />
-                        <a className='text-light text-decoration-none m-2' href={qrCode} download="qrcode.png">Download</a>
+                        <img className='d-block mx-auto border-rounded mb-2' src={qrCode} />
+                        <a className='text-light text-decoration-none m-2 fw-bold' href={qrCode} download="qrcode.png">Download</a>
                     </div>
                 }
             </div>

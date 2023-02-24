@@ -20,6 +20,10 @@ function QrCode() {
             setQrCode(url)
         })
     }
+    // const  setTheUrl = (e)=>{
+    //     console.log(e.target.value) ;
+    //     setUrl(e.target.value) ;
+    // }
     return (
         <div className='main'>
             <div className='moving'>
@@ -41,7 +45,7 @@ function QrCode() {
             <div className='qrCodeInput'>
                 <div className="input-group p-3 d-flex justify-content-center">
                     <div className="form-outline">
-                        <input placeholder='eg : google.com' type="text" id="form1" className="form-control p-2" value={url} onChange={e => setUrl(e.target.value)} />
+                        <input placeholder='Eg: https://www.google.com' type="text" id="form1" className="form-control p-2 border border-warning" value={url} onChange={e => setUrl(e.target.value)} />
                     </div>
                     <button id='generateBtn' onClick={generateQrCode}  className="">
                         Generate
@@ -51,7 +55,7 @@ function QrCode() {
                     qrCode &&
                     <div className='w-100 h-100 mr-3 text-center'>
                         <img className='d-block mx-auto border-rounded mb-2' src={qrCode} />
-                        <a className='text-light text-decoration-none m-2 fw-bold' href={qrCode} download="qrcode.png">Download</a>
+                        <a className='btn btn-success text-light text-decoration-none m-2 fw-bold' href={qrCode} download="qrcode.png">Download</a>
                     </div>
                 }
             </div>

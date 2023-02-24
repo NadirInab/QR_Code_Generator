@@ -1,69 +1,183 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  text-align: center;
+  background-color: darkslategray;
+  color: white;
+  background-image: url(../public/images/depositphotos_606822952-stock-photo-image-code-middle-abstract-technology.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-size: cover;
+  overflow-y: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.app {
+  padding: 2rem 2rem;
+  border: 3px solid red;
+}
+#Navbar {
+  background: rgba(114, 206, 241, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* body {} */
+
+#light {
+  position: relative;
+  top: 150px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+#lineh1 {
+  position: absolute;
+  left: 0;
+  height: 10px;
+  background: #5500AA;
+  animation: lineH 4s 5s infinite linear;
+}
+
+#lineh2 {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  height: 10px;
+  background: #AA2B00;
+  animation: lineH 5s 0.5s infinite linear;
+}
+
+#lineh3 {
+  position: absolute;
+  top: 70px;
+  height: 10px;
+  background: #00D4FF;
+  animation: lineH 5s 2s infinite linear;
+}
+
+#lineh4 {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  height: 10px;
+  background: #00AA2B;
+  animation: lineH 5s 1s infinite linear;
+}
+
+#lineh5 {
+  position: absolute;
+  left: 0;
+  top: 130px;
+  height: 10px;
+  background: #ba8c00;
+  animation: lineH 5s 4s infinite linear;
+}
+
+#lineh6 {
+  position: absolute;
+  right: 0;
+  top: 160px;
+  height: 10px;
+  background: #a5f800;
+  animation: lineH 4s 1s infinite linear;
+}
+
+#lineh7 {
+  position: absolute;
+  right: 0;
+  top: 190px;
+  height: 10px;
+  background: #D50055;
+  animation: lineH 4s 0s infinite linear;
+}
+
+#lineh8 {
+  position: absolute;
+  left: 0;
+  top: 220px;
+  height: 10px;
+  background: #00FFFF;
+  animation: lineH 4s 1.5s infinite linear;
+}
+
+#lineh9 {
+  position: absolute;
+  left: 0;
+  top: 250px;
+  height: 10px;
+  background: #fb7500;
+  animation: lineH 5s 2s infinite linear;
+}
+
+#lineh10 {
+  position: absolute;
+  right: 0;
+  top: 280px;
+  height: 10px;
+  background: #005580;
+  animation: lineH 4s 3s infinite linear;
+}
+
+#lineh11 {
+  position: absolute;
+  right: 0;
+  top: 310px;
+  height: 10px;
+  background: #FF557F;
+  animation: lineH 4s 1s infinite linear;
+}
+
+#lineh12 {
+  position: absolute;
+  right: 0;
+  top: 340px;
+  height: 10px;
+  background: #85B085;
+  animation: lineH 6s 1s infinite linear;
+}
+
+@keyframes lineH {
+  0% {
+    width: 0%;
   }
-  a:hover {
-    color: #747bff;
+
+  100% {
+    width: 95%;
+    opacity: 0;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+.moving {
+  z-index: -1;
+}
+
+.qrCodeInput {
+  z-index: 100;
+  border: 3px solid red;
+  width: 70vw;
+  height:70vh;
+  margin: auto;
+  margin-top: 5rem;
+  background: rgba(1, 169, 209, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#generateBtn{
+  border: 2px solid lightseagreen;
+  font-size: large;
+  color: whitesmoke;
+}
+
+#form1 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }

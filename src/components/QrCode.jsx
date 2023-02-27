@@ -6,7 +6,6 @@ function QrCode() {
     const [qrCode, setQrCode] = useState('');
 
     const generateQrCode = () => {
-        console.log("here");
         QRCode.toDataURL(url,{
             width:280, 
             margin:2 , 
@@ -15,15 +14,10 @@ function QrCode() {
                 light: '#F5F5F5'
             }
         }, (err, url) => {
-            // if (err) return console.log(err);
-            // console.log(url);
             setQrCode(url)
         })
     }
-    // const  setTheUrl = (e)=>{
-    //     console.log(e.target.value) ;
-    //     setUrl(e.target.value) ;
-    // }
+
     return (
         <div className='main'>
             <div className='moving'>
